@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakshan Resume</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        .container11 li{
+            padding: 90px;
+            list-style-type: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+      }
+      
+        .navbar {
+            /* background-color: #030506; */
+            font-weight: bold;
+
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+        }
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #fff;
+        }
+        .resume-header {
+    /* /background-color: #0c0d0e; */
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 100%; /* Start off the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideIn 1s ease-in-out forwards; /* Apply the slideIn animation */
+    font-style: italic;
+}
+
+@keyframes slideIn {
+    from {
+        top: 100%; /* Start off the screen */
+    }
+    to {
+        top: 40%; /* Slide in to the center */
+    }
+}
+
+
+        .resume-body {
+            padding: 30px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0px;
+            font-weight: bold;
+            align-items: center;
+            
+        }
+        .resume-section {
+            justify-content: space-evenly;
+            align-items:center;
+            margin-bottom: 30px;
+            font-weight: bold;
+            align-items: center;
+            background-color: #f9f9f9;
+
+        }
+        .resume-section h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .resume-item {
+            margin-bottom: 15px;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 200px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        .additional-section {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .additional-section h5 {
+            color: #007bff;
+        }
+        .ra{
+     
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 130%;
+      object-fit: cover;
+      z-index: -1;
+    }
+            
+            
+        
+        
+
+.fa-linkedin::before {
+    content: "\f08c"; /* LinkedIn icon from Font Awesome */
+}
+
+.fa-instagram::before {
+    content: "\f16d"; /* Instagram icon from Font Awesome */
+}
+
+.fa-github::before {
+    content: "\f09b"; /* GitHub icon from Font Awesome */
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #007bff; /* Icon color */
+}
+
+.contact-item p {
+    margin: 0;
+}
+.qualification-image {
+    max-width: 100px; /* Set the maximum width of the images */
+    max-height: 100px; /* Set the maximum height of the images */
+}
+.school-college-images {
+    text-align: center; /* Center-align the images */
+    margin-top: 20px; /* Add spacing between the table and images */
+}
+
+.school-image{
+    max-width: 300px; /* Set the maximum width of the images */
+    max-height: 250px; /* Set the maximum height of the images */
+    margin: 10px;
+
+}
+.college-image {
+    max-width: 500px; /* Set the maximum width of the images */
+    max-height: 500px; /* Set the maximum height of the images */
+    margin: 10px; /* Add spacing between the images */
+}
+.container11 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 1;
+    /* background-color: black; */
+    
+}
+.picture-link-text {
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	transition: color 0.3s ease;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+	width: 80%;
+	box-sizing: border-box;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.picture-link {
+	display: block;
+	width: 300px;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease;
+	margin: 0 10px;
+}
+.picture-link:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+.picture-link:hover .picture-link-text {
+	opacity: 1;
+}
+.a{
+    text-decoration: none;
+}
+
+       
+ 
+
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <!-- Add your logo image here -->
+            <a class="navbar-brand" href="#">
+                <img src="photo_2023-09-08_07-27-20.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-top rounded-circle">
+                Joe Selva Rakshan P
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#academic">Academic Qualification</a>
+                    </li><li class="nav-item">
+                        <a class="nav-link" href="#skills">skill set</a>
+                    </li>
+                    <!-- Add other navigation items here -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="ra">
+        <div>
+            <div id="faculty">
+                <video class="ra" autoplay loop muted>
+                  <source src="black_-_13495 (Original).mp4" type="video/mp4">
+                  
+                </video>
+        </div></div></div>
+    <div class="container">
+        <div class="resume-header">
+            <h1>JOE SELVA RAKSHAN P</h1>
+            <p class="lead">WEB DEVELOPER/WEB DESIGNER</p>
+            <h2>Follow on</h2>
+<a href="https://www.linkedin.com/in/rakshan-raks-21468622a/ " class="fa fa-linkedin fa-2x"></a>
+<a href="https://instagram.com/rak_shan_v3_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==" class="fa fa-instagram fa-2x"></a>
+<a href="https://github.com/JoeRakshan " class="fa fa-github fa-2x"></a>
+
+            
+
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+        <div class="resume-body">
+            <div class="resume-section" id="contact">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa fa-envelope"></i>
+                        <p>Email: joeselvarakshan@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-phone"></i>
+                        <p>Phone: +91 9360607325</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-linkedin"></i>
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/rakshan-raks-21468622a/">LinkedIn Profile</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-github"></i>
+                        <p>GitHub: <a href="https://github.com/JoeRakshan">GitHub Profile</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Rest of your resume sections -->
+        </div></div>
+        
+        <div class="resume-section" id="academic">
+            <h2>Academic Qualification</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                        <th>Year of Passing</th>
+                        <th>CGPA / %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.Tech-(Information Technology)</td>
+                        <td>Kamaraj College of Engineering and Technology</td>
+                        <td>2025</td>
+                        <td>7.5 (upto 4th Semester)</td>
+                    </tr>
+                    <tr>
+                        <td>HSC</td>
+                        <td>Boo Vijesh Matriculation Hr Sec School</td>
+                        <td>2021</td>
+                        <td>89.46</td>
+                    </tr>
+                    <tr>
+                        <td>SSLC</td>
+                        <td>Boo Vijesh Matriculation Hr Sec School</td>
+                        <td>2019</td>
+                        <td>82.8</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="school-college-images">
+                <img src="https://yt3.googleusercontent.com/ytc/AOPolaQU_ydYWgAU573DHMzpylqjWq77YZjpkra6HP-n=s900-c-k-c0x00ffffff-no-rj" alt="BVMHSS" class="school-image">
+                <img src="https://images.collegedunia.com/public/college_data/images/appImage/13969_KCET_NEW.jpg" alt="KCET" class="college-image">
+            </div>
+        </div>
+       
+           
+        
+        <div class="resume-section" id="interests">
+            <h2>Areas of Interest</h2>
+            <ul>
+                <div class="container11">
+                <li>
+                    <img src="data:image/png;base64,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" alt="Full Stack Development" style="width: 200px; height: 150px;"><br>
+                     MySQL(Database)
+                </li>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" alt="PHP Backend Connectivity" style="width: 200px; height: 150px;"><br>
+                    PHP Backend Connectivity
+                </li>
+                <li>
+                    <img src="data:image/png;base64,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" alt="Frontend Developing"style="width: 200px; height: 150px;"><br>
+                    Frontend Development
+                </li></div>
+            </ul>
+        </div>
+        
+            <div class="resume-section" id="skills">
+                <h2>Programming Skills</h2>
+                <div class="skill-mf">
+                    <div class="title-box-4">
+                        <h5 class="title-left-2"></h5>
+                    </div>
+                    
+                    <span>HTML</span> <span class="pull-right">75%</span>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>CSS</span> <span class="pull-right">70%</span>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <!-- Add your skill set here -->
+                    <span>C Programming – Core C</span> <span class="pull-right">50%</span>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="XX" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Database Management – MySQL</span> <span class="pull-right">70%</span>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="XX" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>PHP – BACKEND</span> <span class="pull-right">50%</span>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="XX" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <!-- End of your skill set -->
+                </div>
+            </div>
+            
+            <div class="resume-section" id="projects">
+                <h2>Projects</h2>
+                <p>Web Development: Developed a website for Political Party Information System using PHP Backend Connectivity.</p>
+                <a href="https://github.com/JoeRakshan/political-party-information-system">Political Party</a>
+                <p>Web Development HTML, CSS: Created a sample college website using HTML and CSS.</p>
+                <a href="https://github.com/JoeRakshan/college-website">College Website</a>
+
+                <p>Web Development: Created a website for Online Booking of Construction Products using PHP Backend Connectivity.</p>
+                <a href="#">Construction Website</a>
+
+            </div>
+            <div class="container11">
+                <a href="#" class="picture-link" style="background-image: url('https://c8.alamy.com/comp/F2HYA9/c-programming-showing-software-design-and-programmer-F2HYA9.jpg');">
+                    <span class="picture-link-text">C programming</span>
+                </a>
+                <a href="#" class="picture-link" style="background-image: url('https://t3.ftcdn.net/jpg/03/18/60/62/360_F_318606217_Hk8jo2MVoI33SQOkYrfOF929J7JgIP0P.jpg');">
+                    <span class="picture-link-text">Frontend</span>
+                </a>
+                <a href="D:\rakshan\resume rakshan.docx" class="picture-link" style="background-image: url('1676733621161.jpg');">
+                    <span class="picture-link-text">My resume</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
+        <div class="overlay-mf"></div>
+        <div class="white-bg-container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="contact-mf">
+                        <div id="contact" class="box-shadow-full">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="title-box-2 pt-4 pt-md-0">
+                                        <h5 class="title-left">
+                                            Get in Touch
+                                        </h5>
+                                    </div>
+                                    <div class="more-info">
+                                        <p class="lead">
+    
+                                        </p>
+                                        <ul class="list-ico">
+                                            <li><span class="bi bi-geo-alt"></span> mettu street,singamparai,Tirunelveli-627601</li>
+                                            <li><span class="bi bi-phone"></span> +91 9360607325</li>
+                                            <li><span class="bi bi-envelope"></span> joeselvarakshan.com</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="white-bg-container"> <!-- This div creates a white background container -->
+                                        <div class="center">
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <h2><a>Contact through</a></h2>
+                                            <a href="https://www.linkedin.com/in/rakshan-raks-21468622a/" class="fa fa-linkedin fa-2x"></a>
+                                            <a href="https://instagram.com/rak_shan_v3_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==" class="fa fa-instagram fa-2x"></a>
+                                            <a href="https://github.com/JoeRakshan " class="fa fa-github fa-2x"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* Add some CSS for the white background container */
+        .white-bg-container {
+            background-color: rgb(192, 187, 187);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    
+        /* Center-align the content in the white background container */
+        .center {
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+    
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
